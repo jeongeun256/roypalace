@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>R O Y P A L A C E</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/script.js"></script>
+		<!--video banner-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="src/jquery.vide.js"></script>
+		<!--check_date_form-->
+		<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css" />
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+		<script type="text/javascript" src="js/daterangepicker.js"></script>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+		<!--offers-->
+		<link rel="stylesheet" href="dist/jquery.flipster.min.css">		
+		<script src="dist/jquery.flipster.min.js"></script>
+		<!--dining1-->
+		<link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
+		<!--dining2-->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" type="text/css"/>
+		<!--모바일 css 소스-->
+		<link href="css/jquery.mmenu.all.css" rel="stylesheet" type="text/css">	
+		<!--모바일 제이쿼리 소스-->
+		<script src="js/jquery.mmenu.all.js"></script>
+		<!--dining1_mobile-->
+		<link rel="stylesheet" href="dist/accordion.min.css">
+		<script>
+			$(document).ready(function(){		
+					$("#menu").mmenu({
+					   "slidingSubmenus": false,
+					   "navbar": { "title":"brand" },
+					   "extensions": [
+						  "pagedim-black",
+						  "position-right",
+						  "theme-white"
+					   ]
+					});
+			});
+		</script>	
+	</head>
+	<body>
+		<div id="header_wrap"><!--header S-->
+			<header>
+				<h1><a href="index.html" class="pc_logo"><img src="images/pc/header/logo.png" alt="logo"></a></h1>
+					<ul class="gnb"><!--pc용 메뉴-->
+						<li><a href="#about_us">About Us</a></li>
+						<li><a href="#rooms">Rooms</a></li>
+						<li><a href="#offers">Offers</a></li>
+						<li><a href="#dining1">Dining</a></li>
+						<li><a href="#entertain">Entertainment</a></li>
+						<li><a href="#event">Event</a></li>
+					</ul>
+					<ul class="toplink"><!--pc용 메뉴-->
+						<li><a href="#">로그인</a></li>
+						<li>│</li>					
+						<li><a href="#">회원가입</a></li>
+						<li>│</li>	
+						<li><a href="#">예약확인 및 취소</a></li>
+					</ul>
+					<div class="m_gnb"><!--tablet & mobile용 메뉴-->
+						<p>
+							<a href="#menu"><img src="images/tablet/header/gnb_icon.png" alt="gnb_icon"></a>
+						</p>
+						<nav id="menu">
+							<ul class="mobile_gnb">
+								<li><a href="index.html#about_us">About Us</a></li>
+								<li><a href="index.html#rooms">Rooms</a></li>
+								<li><a href="index.html#offers">Offers</a></li>
+								<li><a href="index.html#dining1">Dining</a></li>
+								<li><a href="index.html#entertain">Entertainment</a></li>
+								<li><a href="index.html#event">Event</a></li>
+								<li><a href="index.html#">로그인</a></li>
+								<li><a href="index.html#">회원가입</a></li>
+								<li><a href="index.html#">예약확인 및 취소</a></li>
+								<li>
+							</ul>
+						</nav>							
+					</div>
+			</header>			
+       </div><!--header E-->
+	   <div id="block" style="width: 100%;" data-vide-bg="video/ocean" data-vide-options="position:center 50%">
+				<form class="booking_form">
+					<table>
+						<tr>
+							<td class="check_date">
+								<button type="submit" class="check_btn">Check In - Check Out</button>
+								<div class="container">
+									<input type="text" name="daterange" value="07/01/2020 - 07/06/2020" />
+										<script>
+										$(function() {
+										  $('input[name="daterange"]').daterangepicker({
+											opens: 'left'
+										  }, function(start, end, label) {
+											console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+										  });
+										});
+										</script>
+								</div>	
+							</td>
+							<td class="person">
+								<p>Adult</p>
+								<input type="number" value="1">
+								<p>Chidren</p>
+								<input type="number" value="1">
+							</td>							
+							<th>
+								<button type="button" class="find_btn">Find Rooms</button>
+							</th>
+						</tr>	
+					</table>
+				</form>
+				<button type="button" class="find_btn_m">Find Rooms</button>
+		</div>			
+		<section id="about_us"><!--about_us S-->
+			<h2>About Us</h2>
+			<ul>
+				<li>
+					<h3>High-end life</h3>
+					<p>왕족다운 클래식하고 고급스러운 우아함과</p>
+					<p>현대적인 모던한 감각으로 재해석한</p>
+					<p>고품격의 삶을 추구합니다.</p>
+				</li>
+				<li>
+					<h3>High-minded moment</h3>
+					<p>격이 다른 클래스로 고객님들께 </p>
+					<p>잊지 못할 고결한 순간을</p>
+					<p>선사해드립니다.</p>
+				</li>
+				<li>
+					<h3>High-class place</h3>
+					<p>바다의 상쾌함이 담긴 객실,</p>
+					<p>호텔 안에서 휴양하며, </p>
+					<p>즐길 수 있는 엔터테인먼트로 </p>
+					<p>잊지 못할 즐거운 공간을 선사합니다.</p>
+				</li>
+			</ul>
+		</section><!--about_us E-->
+		<section id="rooms"><!--rooms S-->
+			<h2>Rooms</h2>			
+			<ul class="icon2">
+				<li class="on popupwindow2_1">
+					<a href="#rooms">
+						<img src="images/pc/sub2/icon2_1.png" alt="rooms_icon">
+					</a>
+				</li>
+				<li class="popupwindow2_2">
+					<a href="#rooms">
+						<img src="images/pc/sub2/icon2_2.png" alt="rooms_icon">
+					</a>
+				</li>
+				<li class="popupwindow2_3">
+					<a href="#rooms">
+						<img src="images/pc/sub2/icon2_3.png" alt="rooms_icon">
+					</a>
+				</li>
+				<li class="popupwindow2_4">
+					<a href="#rooms">
+						<img src="images/pc/sub2/icon2_4.png" alt="rooms_icon">
+					</a>
+				</li>
+				<li class="popupwindow2_5">
+					<a href="#rooms">
+						<img src="images/pc/sub2/icon2_5.png" alt="rooms_icon">
+					</a>
+				</li>
+				<li class="popupwindow2_6">
+					<a href="#rooms">
+						<img src="images/pc/sub2/icon2_6.png" alt="rooms_icon">
+					</a>
+				</li>
+			</ul>
+			<!--팝업 시작-->
+			<div class="room_popup popup2_1">
+				<div class="popup_inner inner2_1">
+					<div class="room_info01 room_info">
+						<h3>스탠다드 룸</h3>
+						<span>standard room</span>
+						<p>우아하면서도 아늑한 인테리어로</p>
+						<p>진정한 휴식을 제공합니다.</p>
+						<table>
+							<tr>
+								<th>위치</th>
+								<td>3~6층</td>
+							</tr>
+							<tr>
+								<th>전망</th>
+								<td>시티뷰 또는 오션뷰</td>
+							</tr>
+							<tr>
+								<th>베드타입</th>
+								<td>트윈 또는 킹</td>
+							</tr>
+							<tr>
+								<th>구성</th>
+								<td>침실 1, 욕실 1</td>
+							</tr>
+							<tr>
+								<th>인원</th>
+								<td>성인 2인 기준</td>
+							</tr>
+						</table>
+					</div>		
+				</div>				
+			</div>
+			<div class="room_popup popup2_2">
+				<div class="popup_inner">
+					<div class="room_info02 room_info">
+						<h3>디럭스 룸</h3>
+						<span>deluxe room</span>
+						<p>모던한 아름다움과</p>
+						<p>한 단계 업그레이드 된 휴식을 경험해보세요.</p>
+						<table>
+							<tr>
+								<th>위치</th>
+								<td>8층~12층</td>
+							</tr>
+							<tr>
+								<th>전망</th>
+								<td>시티뷰 또는 오션뷰</td>
+							</tr>
+							<tr>
+								<th>베드타입</th>
+								<td>트윈 또는 킹</td>
+							</tr>
+							<tr>
+								<th>구성</th>
+								<td>침실 1, 욕실 1</td>
+							</tr>
+							<tr>
+								<th>인원</th>
+								<td>성인 2인 기준</td>
+							</tr>
+						</table>
+					</div>		
+				</div>				
+			</div>
+			<div class="room_popup popup2_3">
+				<div class="popup_inner">
+					<div class="room_info03 room_info">
+						<h3>프리미어 스위트 룸</h3>
+						<span>premier suite room</span>
+						<p>부산 오션뷰를 한번에 볼 수 있는</p>
+						<p>탁 트인 공간을 누려보세요.</p>
+						<table>
+							<tr>
+								<th>위치</th>
+								<td>10층~14층</td>
+							</tr>
+							<tr>
+								<th>전망</th>
+								<td>오션뷰</td>
+							</tr>
+							<tr>
+								<th>베드타입</th>
+								<td>트윈 또는 킹</td>
+							</tr>
+							<tr>
+								<th>구성</th>
+								<td>거실1. 응접실 1, 침실 1, 욕실 1, 발코니1</td>
+							</tr>
+							<tr>
+								<th>인원</th>
+								<td>성인 3인 기준 (인원 수 초과 시 문의바랍니다.)</td>
+							</tr>
+						</table>
+					</div>		
+				</div>				
+			</div>
+			<div class="room_popup popup2_4">
+				<div class="popup_inner">
+					<div class="room_info04 room_info">
+						<h3>로얄 스위트 룸</h3>
+						<span>royal suite room</span>
+						<p>여유로운 휴식을 즐길 수 있는</p>
+						<p>프라이빗 수영장이 있는 고품격 공간입니다.</p>
+						<table>
+							<tr>
+								<th>위치</th>
+								<td>15층</td>
+							</tr>
+							<tr>
+								<th>전망</th>
+								<td>오션뷰</td>
+							</tr>
+							<tr>
+								<th>베드타입</th>
+								<td>킹1, 퀸2</td>
+							</tr>
+							<tr>
+								<th>구성</th>
+								<td>거실1, 응접실 1, 침실 2, 욕실 2, 발코니1, 프라이빗 풀1</td>
+							</tr>
+							<tr>
+								<th>인원</th>
+								<td>성인 4인 기준 (인원 수 초과 시 문의바랍니다.)</td>
+							</tr>
+						</table>
+					</div>		
+				</div>				
+			</div>
+			<div class="room_popup popup2_4">
+				<div class="popup_inner">
+					<div class="room_info04 room_info">
+						<h3>로얄 스위트 룸</h3>
+						<span>royal suite room</span>
+						<p>여유로운 휴식을 즐길 수 있는</p>
+						<p>프라이빗 수영장이 있는 고품격 공간입니다.</p>
+						<table>
+							<tr>
+								<th>위치</th>
+								<td>15층</td>
+							</tr>
+							<tr>
+								<th>전망</th>
+								<td>오션뷰</td>
+							</tr>
+							<tr>
+								<th>베드타입</th>
+								<td>킹1, 퀸2</td>
+							</tr>
+							<tr>
+								<th>구성</th>
+								<td>거실1, 응접실 1, 침실 2, 욕실 2, 발코니1, 프라이빗 풀1</td>
+							</tr>
+							<tr>
+								<th>인원</th>
+								<td>성인 4인 기준 (인원 수 초과 시 문의바랍니다.)</td>
+							</tr>
+						</table>
+					</div>		
+				</div>				
+			</div>
+			<div class="room_popup popup2_5">
+				<div class="popup_inner">
+					<div class="room_info05 room_info">
+						<h3>프레지덴셜 스위트 룸</h3>
+						<span>presidential suite room</span>
+						<p>로이팰리스 추구하는 하이클래스 공간에서</p>
+						<p>고품격의 삶을 느껴보세요.</p>
+						<table>
+							<tr>
+								<th>위치</th>
+								<td>16층</td>
+							</tr>
+							<tr>
+								<th>전망</th>
+								<td>오션뷰</td>
+							</tr>
+							<tr>
+								<th>베드타입</th>
+								<td>킹1, 퀸2</td>
+							</tr>
+							<tr>
+								<th>구성</th>
+								<td>거실1, 응접실 1, 침실 3, 욕실 2, 파우더룸 1, 발코니1, 프라이빗 풀1</td>
+							</tr>
+							<tr>
+								<th>인원</th>
+								<td>성인 6인 기준 (인원 수 초과 시 문의바랍니다.)</td>
+							</tr>
+						</table>
+					</div>		
+				</div>				
+			</div>
+			<div class="room_popup popup2_6">
+				<div class="popup_inner">
+					<div class="room_info06 room_info">
+						<h3>풀 빌라</h3>
+						<span>pool villa</span>
+						<p>프라이빗한 하이퀄리티 공간으로</p>
+						<p>사랑하는 사람들과 행복을 누려보세요.</p>
+						<table>
+							<tr>
+								<th>위치</th>
+								<td>별관 복층 구조</td>
+							</tr>
+							<tr>
+								<th>전망</th>
+								<td>오션뷰</td>
+							</tr>
+							<tr>
+								<th>베드타입</th>
+								<td>킹1, 퀸2</td>
+							</tr>
+							<tr>
+								<th>구성</th>
+								<td class="room_info06_text">
+									<p>거실1, 응접실1, 다이닝 룸1, 침실 3, 욕실 3, 파우더룸 1,</p>
+									<p>발코니1, 테라스1, 미니정원1, 프라이빗 풀1</p>
+								</td>
+							</tr>
+							<tr>
+								<th>인원</th>
+								<td>성인 8인기준 (인원 수 초과 시 문의바랍니다.)</td>
+							</tr>
+						</table>
+					</div>		
+				</div>				
+			</div>
+			<!--팝업 끝-->
+		</section><!--rooms E-->
+		<section id="offers" class="offers_pc"><!--offers S-->
+			<h2>Offers</h2>		
+			<div class="carousel">
+				<ul class="flip-items">
+					<li>
+						<img src="images/pc/sub3/offer01.jpg" alt="offers_banner">
+					</li>
+					<li>
+						<img src="images/pc/sub3/offer02.jpg" alt="offers_banner">
+					 </li>
+				   <li>
+						<img src="images/pc/sub3/offer03.jpg" alt="offers_banner">
+					</li>
+					<li>
+						<img src="images/pc/sub3/offer04.jpg" alt="offers_banner">
+					</li>
+					<li>
+						<img src="images/pc/sub3/offer05.jpg" alt="offers_banner">
+					</li>         
+				</ul>
+			</div>
+			<script>
+				var carousel = $(".carousel").flipster({
+					style: 'carousel',
+					spacing: -0.5,
+					nav: false,
+					buttons:true,
+				});
+			</script>
+		</section><!--offers E-->
+		<section id="offers" class="offers_mobile"><!--offers S-->
+			<h2>Offers</h2>		
+			<div class="carousel">
+				<ul class="flip-items">
+					<li>
+						<img src="images/mobile/sub3/offer01.png" alt="offers_banner">
+					</li>
+					<li>
+						<img src="images/mobile/sub3/offer02.png" alt="offers_banner">
+					 </li>
+				   <li>
+						<img src="images/mobile/sub3/offer03.png" alt="offers_banner">
+					</li>
+					<li>
+						<img src="images/mobile/sub3/offer04.png" alt="offers_banner">
+					</li>
+					<li>
+						<img src="images/mobile/sub3/offer05.png" alt="offers_banner">
+					</li>         
+				</ul>
+			</div>
+			<script>
+				var carousel = $(".carousel").flipster({
+					style: 'carousel',
+					spacing: -0.5,
+					nav: false,
+					buttons:true,
+				});
+			</script>
+		</section><!--offers E-->
+		<section id="dining1" class="dining1_pc"><!--dining1 S-->
+			<h2>Dining</h2>		
+			<h3>restaurant</h3>
+			<ul class="dining01" id="dining01">
+				<li class="dining_tap popupwindow4_1">
+					<a href="#dining01">
+						<h4>Hestia</h4>
+						<p>창 밖의 부산 오션 뷰와 함께</p>
+						<p>로이팰리스의 고품격을 담은</p>
+						<p>120여가지 풍부한 메뉴를 선보이는</p>
+						<p>헤스티아 뷔페 레스토랑</p>
+					</a>
+				</li>
+				<li class="popupwindow4_2">
+					<a href="#dining01">
+						<h4>Minerva</h4>
+						<p>모던한 감각과 신선한 해산물로</p>
+						<p>틀에 얽매이지 않는</p>
+						<p>새롭고 다양한 한식을 선보이는</p>
+						<p>미네르바 퓨전 한식 레스토랑</p>
+					</a>
+				</li>
+				<li class="popupwindow4_3">
+					<a href="#dining01">
+						<h4>Fortuna</h4>
+						<p>이탈리아의 본연 맛을 느낄 수 있는</p>
+						<p>클래식하고 우아한 분위기의</p>
+						<p>포르투나 이탈리안 레스토랑</p>
+					</a>
+				</li>
+				<li class="popupwindow4_4">
+					<a href="#dining01">
+						<h4>Psyche</h4>
+						<p>로맨틱한 분위기와</p>
+						<p>프렌치 정통 요리를 선보이는</p>
+						<p>프시케 프렌치 레스토랑</p>
+					</a>
+				</li>
+			</ul>
+			<!--팝업 시작-->
+			<div class="dining_popup popup4_1">				
+			</div>
+			<div class="dining_popup popup4_2">				
+			</div>
+			<div class="dining_popup popup4_3">				
+			</div>
+			<div class="dining_popup popup4_4">				
+			</div>
+			<!--팝업 끝-->			
+		</section><!--dining1 E-->
+		<section id="dining1" class="dining1_mobile"><!--dining1 S-->
+			<h2>Dining</h2>		
+			<h3>restaurant</h3>
+			<ul class="dining01 accordion-container" id="dining01">
+				<li class="ac">
+					<a class="ac-header">
+						<button class="ac-trigger">Hestia</button>
+						<p>창 밖의 부산 오션 뷰와 함께</p>
+						<p>로이팰리스의 고품격을 담은</p>
+						<p>120여가지 풍부한 메뉴를 선보이는</p>
+						<p>헤스티아 뷔페 레스토랑</p>
+					</a>
+					<ul class="ac-panel">
+						<li class="ac-text"><img src="images/mobile/sub4/dining1_01.jpg" alt="dining_photo"></li>
+					</ul>
+				</li>
+				<li class="ac">
+					<a class="ac-header">
+						<button class="ac-trigger">Minerva</button>
+						<p>모던한 감각과 신선한 해산물로</p>
+						<p>틀에 얽매이지 않는</p>
+						<p>새롭고 다양한 한식을 선보이는</p>
+						<p>미네르바 퓨전 한식 레스토랑</p>
+					</a>
+					<ul class="ac-panel">
+						<li class="ac-text"><img src="images/mobile/sub4/dining1_02.jpg" alt="dining_photo"></li>
+					</ul>
+				</li>
+				<li class="ac">
+					<a class="ac-header">
+						<button class="ac-trigger">Fortuna</button>
+						<p>이탈리아의 본연 맛을 느낄 수 있는</p>
+						<p>클래식하고 우아한 분위기의</p>
+						<p>포르투나 이탈리안 레스토랑</p>
+					</a>
+					<ul class="ac-panel">
+						<li class="ac-text"><img src="images/mobile/sub4/dining1_03.jpg" alt="dining_photo"></li>
+					</ul>
+				</li>
+				<li class="ac">
+					<a class="ac-header">
+						<button class="ac-trigger">Psyche</button>
+						<p>로맨틱한 분위기와</p>
+						<p>프렌치 정통 요리를 선보이는</p>
+						<p>프시케 프렌치 레스토랑</p>
+					</a>
+					<ul class="ac-panel">
+						<li class="ac-text"><img src="images/mobile/sub4/dining1_04.jpg" alt="dining_photo"></li>
+					</ul>
+				</li>
+			</ul>	
+		</section><!--dining1 E-->
+		<script src="dist/accordion.min.js"></script>
+		<script>
+		  new Accordion('.accordion-container');
+		</script>
+		<section id="dining2"><!--dining2 S-->
+			  <div class="swiper-container mySwiper">
+				 <div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<ul>
+							<li>
+								<img src="images/pc/sub4/dining2_01.png" alt="dining_image">
+							</li>
+							<li>
+								<h3>Private Lounge</h3>
+								<h4>Rhea</h4>
+								<p>스페셜한 고객들을 위한 프라이빗 라운지</p>
+								<p>나만의 비밀의 정원처럼 로맨틱한 공간과</p>
+								<p>최상급 재료로 만든 디저트와 음료,</p>
+								<p>다채로운 칵테일과 와인을 선보입니다.</p>
+							</li>
+						</ul>
+					</div>
+					<div class="swiper-slide">
+					  <ul>
+							<li>
+								<img src="images/pc/sub4/dining2_02.png" alt="dining_image">
+							</li>
+							<li>
+								<h3>Lounge & bar</h3>
+								<h4>Phoebe</h4>
+								<p>아름다운 라이브 연주와 함께</p>
+								<p>낮에는 산뜻한 브런치를,</p>
+								<p>밤에는 다양한 주류를 즐길 수 있는</p>
+								<p>라운지 앤 바 포이베입니다.</p>
+							</li>
+						</ul>
+					</div>
+					<div class="swiper-slide">
+					  <ul>
+							<li>
+								<img src="images/pc/sub4/dining2_03.png" alt="dining_image">
+							</li>
+							<li>
+								<h3>skyline bar</h3>
+								<h4>Nyx</h4>
+								<p>부산의 오션뷰를 한눈에 볼 수 있는</p>
+								<p>스카이라인 바에서</p>
+								<p>황홀한 순간을 선사해드립니다.</p>
+							</li>
+						</ul>
+					</div>
+				 </div>
+				 <div class="swiper-button-next"></div>
+				 <div class="swiper-button-prev"></div>
+				 <div class="swiper-pagination"></div>
+			</div>
+			<!-- Swiper JS -->
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+			<!-- Initialize Swiper -->
+			<script>
+			  var swiper = new Swiper(".mySwiper", {
+				effect: "flip",
+				grabCursor: true,
+				pagination: {
+				  el: ".swiper-pagination",
+				},
+				navigation: {
+				  nextEl: ".swiper-button-next",
+				  prevEl: ".swiper-button-prev",
+				},
+			  });
+			</script>
+		</section><!--dining2 E-->
+		<section id="entertain"><!--entertain S-->
+			<h2>Entertainment</h2>		
+			<div class="swiper-container mySwiper2">
+				 <div class="swiper-wrapper">
+					<div class="swiper-slide entertain_img">
+						<img src="images/pc/sub5/entertainment01.jpg" alt="entertainment_image">
+						<div class="entertain_info">
+							<h3>Outdoor Pool</h3>
+							<div>
+								<p>아이부터 어른까지 모두 즐길 수 있는</p>
+								<p>로이팰리스의 야외 수영장</p>
+							</div>						
+							<a href="#"><span>자세히 보기</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide entertain_img">
+						<img src="images/pc/sub5/entertainment02.jpg" alt="entertainment_image">
+						<div class="entertain_info">
+							<h3>Wedding Hall</h3>
+							<div>
+								<p>인생의 특별한 순간을 연출할 수 있는</p>
+								<p>우아하고 기품있는 웨딩홀</p>
+							</div>
+							<a href="#"><span>자세히 보기</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide entertain_img">
+						<img src="images/pc/sub5/entertainment03.jpg" alt="entertainment_image">
+						<div class="entertain_info">
+							<h3>Shopping Mall</h3>
+							<div>
+								<p>트렌디한 스타일로 변신할 수 있는</p>
+								<p>로이팰리스의 쇼핑몰</p>
+							</div>
+							<a href="#"><span>자세히 보기</span></a>
+						 </div>
+					</div>
+					<div class="swiper-slide entertain_img">
+						<img src="images/pc/sub5/entertainment04.jpg" alt="entertainment_image">
+						<div class="entertain_info">
+							<h3>Art Gallery</h3>
+							<div>
+								<p>감각적인 문화 전시 공간</p>
+								<p>로이팰리스의 아트 갤러리</p>
+							</div>
+							<a href="#"><span>자세히 보기</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide entertain_img">
+						<img src="images/pc/sub5/entertainment05.jpg" alt="entertainment_image">
+						<div class="entertain_info">
+							<h3>Fitness Center</h3>
+							<div>
+								<p>건강한 하루를 유지 할 수 있는</p>
+								<p>트렌디한 피트니스 센터</p>
+							</div>
+							<a href="#"><span>자세히 보기</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide entertain_img">
+						<img src="images/pc/sub5/entertainment06.jpg" alt="entertainment_image">
+						<div class="entertain_info">
+							<h3>Spa</h3>
+							<div>
+								<p>피곤했던 심신을 충전할 수 있는</p>
+								<p>편안하고 쾌적한 스파</p>
+							</div>
+							<a href="#"><span>자세히 보기</span></a>
+						</div>
+					</div>
+				 </div>
+				 <div class="swiper-button-next"></div>
+				 <div class="swiper-button-prev"></div>
+			</div>
+			<div thumbsSlider="" class="swiper-container mySwiper2_1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide thumb_img">
+						<img src="images/pc/sub5/entertainment01_1.jpg" alt="entertainment_image">
+					</div>
+					<div class="swiper-slide thumb_img">
+						<img src="images/pc/sub5/entertainment02_1.jpg" alt="entertainment_image">
+					</div>
+					<div class="swiper-slide thumb_img">
+						<img src="images/pc/sub5/entertainment03_1.jpg" alt="entertainment_image">
+					</div>
+					<div class="swiper-slide thumb_img">
+						<img src="images/pc/sub5/entertainment04_1.jpg" alt="entertainment_image">
+					</div>
+					<div class="swiper-slide thumb_img">
+						<img src="images/pc/sub5/entertainment05_1.jpg" alt="entertainment_image">
+					</div>
+					<div class="swiper-slide thumb_img">
+						<img src="images/pc/sub5/entertainment06_1.jpg" alt="entertainment_image">
+					</div>
+				</div>
+			 </div>
+			 <!-- Swiper JS -->
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+			 <!-- Initialize Swiper -->
+			<script>
+			  var swiper = new Swiper(".mySwiper2_1", {
+				spaceBetween: 10,
+				slidesPerView: 6,
+				freeMode: true,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+			  });
+			  var swiper2 = new Swiper(".mySwiper2", {
+				spaceBetween: 10,
+				navigation: {
+				  nextEl: ".swiper-button-next",
+				  prevEl: ".swiper-button-prev",
+				},
+				thumbs: {
+				  swiper: swiper,
+				},
+			  });
+			</script>
+		</section><!--entertain E-->
+		<section id="event" class="event_pc"><!--event S-->
+			<h2>Event</h2>		
+			<ul class="event_banner banner1">
+				<li><img src="images/pc/sub6/event01.jpg" alt="event_banner_image"></li>
+				<li><img src="images/pc/sub6/event03.jpg" alt="event_banner_image"></li>
+			</ul>
+			<ul class="event_banner banner2">
+				<li><img src="images/pc/sub6/event02.jpg" alt="event_banner_image"></li>
+				<li><img src="images/pc/sub6/event04.jpg" alt="event_banner_image"></li>
+			</ul>
+		</section><!--event E-->
+		<section id="event" class="event_mobile"><!--event S-->
+			<h2>Event</h2>		
+			<ul class="event_banner">
+				<li><img src="images/pc/sub6/event01.jpg" alt="event_banner_image"></li>
+				<li><img src="images/pc/sub6/event02.jpg" alt="event_banner_image"></li>
+				<li><img src="images/pc/sub6/event03.jpg" alt="event_banner_image"></li>
+				<li><img src="images/pc/sub6/event04.jpg" alt="event_banner_image"></li>
+			</ul>
+		</section><!--event E-->
+		<footer id="footer"><!--footer S-->
+			<h1><a href="index.html"><img src="images/pc/footer/logo_w.png" alt="logo"></a></h1>
+			<div class="footer_list">
+				<ul>
+					<li><a href="#">고객센터</a></li>
+					<li>│</li>
+					<li><a href="#">이용약관</a></li>
+					<li>│</li>
+					<li><a href="#">이메일무단수집금지</a></li>
+					<li>│</li>
+					<li><a href="#">영상정보처리기기운영·관리방침</a></li>
+					<li>│</li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li>│</li>
+					<li><a href="#">호텔 정책</a></li>
+				</ul>
+				<p>부산광역시 서구 송도해변로 송도해수욕장</p>
+				<p>사업자등록번호 123-45-67890 통신판매신고번호 서구 0000호</p>
+				<p>© 2021 ROYPALACE HOTEL Co. All rights reserved.</p>
+			</div>
+			<ul class="sns_list">
+				<li><a href="https://www.instagram.com/" target="_blank"><img src="images/pc/footer/sns_icon01.png" alt="sns_icon"></a></li>
+				<li><a href="https://www.facebook.com/" target="_blank"><img src="images/pc/footer/sns_icon02.png" alt="sns_icon"></a></li>
+				<li><a href="https://www.youtube.com/" target="_blank"><img src="images/pc/footer/sns_icon03.png" alt="sns_icon"></a></li>
+				<li><a href="https://www.tripadvisor.co.kr/" target="_blank"><img src="images/pc/footer/sns_icon04.png" alt="sns_icon"></a></li>
+			</ul>
+		</footer><!--footer E-->
+	</body>
+</html>
